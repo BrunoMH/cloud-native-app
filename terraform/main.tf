@@ -56,10 +56,10 @@ module "eks" {
 
   eks_managed_node_groups = {
     default = {
-      instance_types = ["t3.medium"]
+      instance_types = ["t3.small"]
       min_size       = 1
-      max_size       = 3
-      desired_size   = 2
+      max_size       = 2
+      desired_size   = 1
     }
   }
 
@@ -73,6 +73,7 @@ module "eks" {
 resource "aws_ecr_repository" "backend" {
   name                 = "backend-app"
   image_tag_mutability = "MUTABLE"
+  force_delete         = true
 
   image_scanning_configuration {
     scan_on_push = true
