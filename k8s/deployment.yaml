@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: backend
 spec:
-  replicas: 1
+  replicas: 2
   selector:
     matchLabels:
       app: backend
@@ -14,7 +14,14 @@ spec:
     spec:
       containers:
         - name: backend
-          image: backend-app
-          imagePullPolicy: Never
+          image: <ACCOUNT_ID>.dkr.ecr.us-east-1.amazonaws.com/backend-app:latest
+          imagePullPolicy: Always
           ports:
             - containerPort: 3000
+          resources:
+            requests:
+              memory: "64Mi"
+              cpu: "250m"
+            limits:
+              memory: "128Mi"
+              cpu: "500m"
