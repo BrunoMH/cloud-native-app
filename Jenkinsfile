@@ -3,7 +3,7 @@ pipeline {
 
   environment {
     AWS_REGION      = "us-east-1"
-    ECR_REGISTRY    = "<ACCOUNT_ID>.dkr.ecr.us-east-1.amazonaws.com"
+    ECR_REGISTRY    = "221423659416.dkr.ecr.us-east-1.amazonaws.com"
     ECR_REPO        = "backend-app"
     CLUSTER_NAME    = "cloud-native-cluster"
     IMAGE_TAG       = "${BUILD_NUMBER}"
