@@ -149,7 +149,7 @@ terraform destroy
 ## Screenshots
 
 ### Architecture (PLAN)
-![Project architecture](docs/Architecture.png)
+![Project architecture](docs/architecture.png)
 
 ### Jenkins pipeline — build #15 (SUCCESS)
 ![Jenkins pipeline success](docs/jenkins-success.png.webp)
