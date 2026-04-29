@@ -152,10 +152,10 @@ terraform destroy
 ![Project architecture](docs/Architecture.png)
 
 ### Jenkins pipeline — build #15 (SUCCESS)
-![Jenkins pipeline success](docs/jenkins-success.png)
+![Jenkins pipeline success](docs/jenkins-success.png.webp)
 
 ### API responding from AWS
-![API response from AWS Load Balancer](docs/api-response.png)
+![API response from AWS Load Balancer](docs/api-response.png.webp)
 
 ---
 
