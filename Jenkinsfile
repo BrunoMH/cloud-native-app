@@ -37,6 +37,7 @@ pipeline {
           sh '''
             aws eks update-kubeconfig --region $AWS_REGION --name $CLUSTER_NAME
 
+            kubectl apply -f k8s/
             kubectl set image deployment/backend \
               backend=$ECR_REGISTRY/$ECR_REPO:$IMAGE_TAG
           '''
